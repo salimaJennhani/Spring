@@ -14,4 +14,6 @@ public class Composant implements Serializable {
     private String nomComposant ;
     private Float prix ;
     // Constructeur et accesseurs (getters) et mutateurs (setters)
+    @ManyToOne
+    Menu menu;
 }

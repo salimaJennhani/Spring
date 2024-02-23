@@ -3,6 +3,7 @@ package com.example.demo.Entity;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 
 @Entity
@@ -16,4 +17,6 @@ public class Client implements Serializable {
     private String identifiant ;
     @Temporal(TemporalType.DATE)
     private Date datePremiereVisite ;
+    @OneToMany(mappedBy = "client")
+    private ArrayList<Commande> commandes;
 }
